@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="sr">
+   <head>
+      <title>Kiriku M | Dobrodosli</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Fast food">
+      <meta name="keywords" content="brza hrana, novo milosevo, gril, restoran">
+      <meta name="author" content="Maja Isakovic">
+      <link rel="icon" href="favicon/favicon.ico">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- fontovi -->
+      <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+      <!-- materialize -->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+         rel="stylesheet">
+      <script src="js/script.js"></script>
+      <style>
+      </style>
+   </head>
+   <body>
+      <!-- header (desktop size) -->
+      <header>
+         <!-- slider (for mobile size) -->
+         <div class="slide1">
+            <span class="open_slide">
+               <a href="#" id="main" onclick="openSideMenu()">
+                  <svg width="30" height="30">
+                     <path d="M0,5 30,5" stroke="#CE1126" stroke-width="3"/>
+                     <path d="M0,14 30,14" stroke="#CE1126" stroke-width="3"/>
+                     <path d="M0,23 30,23" stroke="#CE1126" stroke-width="3"/>
+                  </svg>
+               </a>
+            </span>
+         </div>
+         <!-- Side menu  -->
+         <div id="side_menu" class="side_nav">
+            <a href="#" id="close_btn" onclick="closeSideMenu()">&times;</a>
+            <a href="index.html" style="color: #609191;"> Početna</a>
+            <a href="meni.html"> Meni</a>
+            <a href="ipressions.php"> Utisci</a>   
+            <a href="contact.php"> Kontakt</a>
+         </div>
+         <div class="container logo">
+            <h1>Kiriku M</h1>
+            <nav>
+               <ul>
+                  <li><a href="index.html" class="current">Pocetna</a></li>
+                  <li><a href="meni.html">Meni</a></li>
+                  <li><a href="ipressions.php">Utisci</a></li>
+                  <li><a href="contact.php">Kontakt</a></li>
+               </ul>
+            </nav>
+         </div>
+      </header>
+      <main>
+         <!--Beckground image-->
+         <section class="background_header">
+            <div class="container">
+               <h2>Dobro došli u <span class="red">Kiriku M</span></h2>
+               <p class="slogan">Jedite kod nas, tu smo za Vas!</p>
+            </div>
+         </section>
+         <!--KNJIGA UTISAKA-->
+         <section id="book_imp">
+            <div class="container">
+               <div class="tooltip_book">
+                  <h2 class="book_h2">Upisite se u knjiigu utisaka </h2>
+                  <a href="ipressions.php"><img src="images/book64.png" alt="knjiga-utisaka" title="Knjiga Utisaka"></a>
+               </div>
+            </div>
+         </section>
+         <!--BOXOVI-->
+         <section id="boxes">
+            <div class="container flexi_wrapper">
+               <div class="box_food">
+                  <img src="images/burger.png" alt="pizza">
+                  <h4>Slani Program</h4>
+                  <p>Kod nas možete naći veliki izbor jela sa roštilja, ukusne pice i slane palačinke!</p>
+               </div>
+               <div class="box_food">
+                  <img src="images/creme-caramel.png" alt="cupcake">
+                  <h4>Slatki Program</h4>
+                  <p>Zasladite se! Nudimo i slatki asortiman po vašoj meri! Izaberite neku od slatkih palačinki ili baklava!</p>
+               </div>
+               <div class="box_food">
+                  <img src="images/water.png" alt="lemonade">
+                  <h4>Napitci</h4>
+                  <p>U ponudi je takođe i osveženje za pre ili posle našeg ukusnog obroka :)</p>
+               </div>
+            </div>
+         </section>
+         <!--Adresa, Radno Vreme i Social Media-->
+         <div id="about_and_socialmedia">
+            <div class="container flexi_about">
+               <!--adresa--> 
+               <address>     
+                  <i class="center">Adresa</i> <br>
+                  <i class="material-icons">location_on</i>  Trg palih heroja br.2<br>
+                  <i class="material-icons">location_city</i>  Novo Miloševo<br>
+                  <i class="material-icons">local_phone</i> <a href="tel:+381645652478" class="white"> 061/64-80-714</a><br>
+                  <i class="material-icons">email</i>  kirikufastfood@gmail.com<br>
+               </address>
+               <!--radno vreme-->
+               <div class="open">
+                  <i class="center">Radno vreme</i><br>
+                  <i class="material-icons">done</i>Ponedeljak 16h-23h<br>
+                  <i class="material-icons">done</i>Utorak 16h-23h<br>
+                  <i class="material-icons">done</i>Sreda 16h-23h<br>
+                  <i class="material-icons">done</i>Cetvrtak 16h-23h<br>
+                  <i class="material-icons">done</i>Petak 16h-23h<br>
+                  <i class="material-icons">done</i>Subota 16h-24h<br>
+                  <i class="material-icons">clear</i>Nedelja-zatvoreno-<br>
+               </div>
+               <!--social media icons-->
+               <div class="social_media_icons">
+                  <div class="tooltip face">
+                     <a href="https://www.instagram.com/kiriku_m/" target="_blank" ><img src="images/insta_color.png" alt="instagram" title="Instagram"></a>
+                     <span class="tooltiptext hide">Pratite nas na instagramu</span>
+                  </div>
+                  <div class="tooltip insta">
+                     <a href="https://web.facebook.com/KirikuRS/" target="_blank" ><img src="images/face_color.png" alt="facebook" title="Facebook"></a>
+                     <span class="tooltiptext hide">Posetite nasu facebook stranicu</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+      <!--Footer-->
+      <footer>
+        <p>Copyright &copy; 2018 <span class="red">Maja Isakovic</span></p>
+      </footer>
+   </body>
+</html>

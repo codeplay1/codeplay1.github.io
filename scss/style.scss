@@ -1,0 +1,911 @@
+@import 'vars';
+@import 'mixins';
+
+@include main;
+
+
+/* Side slider */
+.slide1{
+    display: none;
+}
+
+.side_nav{   
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: $grey;
+    opacity: 0.9;
+    overflow-x: hidden;
+    padding-top: 50px;
+    transition: 0.5s;
+
+    a{
+        padding: 10px 10px 10px 30px;
+        text-decoration: none;
+        font-size: 18px;
+        color: $white;
+        display: block;
+        transition: 0.4s;
+        font-weight: bold;
+
+        &:hover{
+            color: $red;
+        }
+    }
+}
+
+
+
+#close_btn{
+    position: absolute;
+    top: 0;
+    right: 22px;
+    margin-top: 25px;
+    margin-left: 50px;
+}
+/*-close slide-*/
+
+/* Header Styles */
+/*keyframe animation header*/
+@keyframes animation_header  {
+    from {color: $white; text-shadow: 2px 2px 5px $red;}
+    to {color: $red; text-shadow: 4px 4px 8px $black;}
+}
+
+h1 {
+    text-shadow: 2px 2px 5px $red;
+    color: $white;
+    font-size: 40px;
+    float: left;
+    /*animation header*/
+    animation-name: animation_header;
+    animation-duration: 6s;
+    animation-delay: 2s;
+    animation-iteration-count: 10;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: backwards;
+    width: 170px;
+}
+
+/*container*/
+.container{
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+}
+
+.logo{
+padding-top: 20px;
+padding-bottom: 20px;
+}
+
+header{
+    width: 100%;
+	position: fixed;
+	background: $grey;
+	color: $white;
+    border-bottom: $red 2px solid;
+    min-height: 70px;
+}
+
+nav {
+    float: right;
+    margin-top: 20px;
+
+    ul{
+        font-weight: bolder;
+        overflow: hidden;
+
+        li{
+            display: inline;
+            padding-left: 10px;    
+
+            a{
+                text-decoration: none;
+                text-transform: uppercase;  
+                color: $white;
+                
+                &:hover{
+                    color: $red;
+                }               
+            }
+        }
+    }
+}
+.current{
+    color: $blue; 
+
+    &:hover{
+        color: $blue; 
+    }
+}
+
+main{
+    margin-top: 95px;
+}
+
+.background_header{
+	width: 100%;
+	min-height: 450px;
+	background: url('../images/pizza_1.jpg') no-repeat 0;
+	text-align: center;
+    color: $white;
+    background-attachment: fixed;
+    background-position: top center;
+    background-size: cover;
+    
+    h2{
+        margin-top: 150px;
+        font-size: 32px;
+    }
+
+    .red{
+        color: $red;
+        font-weight: bolder;
+        font-size: 36px;
+    }
+
+    .slogan{
+        font-size: 34px;
+        font-weight: bolder;
+    }
+   
+}
+
+/* KNJIGA UTISAKA */
+#book_imp{
+    width: 100%;
+    min-height: 70px;
+	background: $grey;
+	border-top: $red 2px solid;
+	color: $white;	
+	padding-top: 15px;
+    padding-bottom: 15px;
+
+    .tooltip_book{
+        float: right;
+
+        .book_h2{
+            float: left;
+            padding-top: 15px;
+            padding-right: 15px;
+            padding-left: 15px;
+            font-size: 22px; 
+            color: $blue;
+
+            &:hover{
+                color: $red;
+            }
+        }
+    }
+}
+
+/* 3 boxes */
+
+.flexi_wrapper{
+    max-width: 1500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .box_food{
+        flex-basis: 30%;
+        text-align: center;
+        margin-top: 60px;
+        margin-bottom: 60px;
+
+        h4{
+            color: $red;
+            font-size: 22px;
+            padding: 15px 0px 15px;
+        }
+    }
+}
+
+/* address, about and social media*/
+
+#about_and_socialmedia{
+	background-color: $blue;
+	color: $white;
+}
+
+.flexi_about{
+    max-width: 1500px;
+    padding: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+
+        address{
+            flex-basis: 30%;
+            text-align: left;
+        .center{
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .white{
+            text-decoration: none;
+            color: $white;
+        }
+    }
+
+    .open{
+        text-align: left;
+        flex-basis: 30%;
+
+        .center{
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+
+    .social_media_icons{
+        text-align: right;
+        flex-basis: 30%;
+        display: flex;
+
+        .tooltip{
+            padding-right: 15px;         
+        }
+        .face{
+            flex: 6;
+        }
+        .insta{
+            flex: 1;
+            margin-left: -15px;
+            
+        }
+        .hide{
+            display: none;
+        }
+    }
+
+    .mapa{
+        border-radius: 3px;
+        flex-basis: 30%;
+        overflow-y: hidden;
+        width: 480px; 
+        height: 350px;
+    }
+
+}
+
+/* footer */
+footer {
+	background: $grey;
+	width: 100%;
+	color: $white;
+	padding: 10px 0;
+    text-align: center;
+
+    .red{
+        color: $red;
+    }
+}
+
+
+/***  UTISCI PAGE   ***/
+#heading_impression{
+    background-image: url('../images/pexels-photo-315704.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top center;
+    background-size: cover;
+}
+
+.book_image{
+    padding-top: 30px; 
+   
+
+    .book_open{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .h2_book_imp{
+        padding-top: 20px;
+        color: $white;
+        font-size: 24px;
+        text-align: center;
+    }
+}
+
+.h3_comment{
+    font-size: 20px;
+    color: $red;
+    padding-bottom: 20px;
+ 
+}
+
+
+.space_around{
+    padding-bottom: 40px;
+    padding-top: 20px;
+    min-width: 1200px;
+    float:left;
+
+        .comment_form{
+        padding: 40px;
+        min-height: 300px;
+        max-width: 450px;
+        background: $red_opacity;
+        border: 2px solid $red;
+        border-radius: 10px;
+
+        .name{
+            padding: 5px;
+        }
+
+        .label{
+            font-weight: bolder;
+            color: $grey_dark;
+        }
+
+        .input{
+            padding: 5px;
+            min-width: 100%;
+            min-height: 30px;
+            border-radius: 5px;        
+        }
+
+        .input_text{
+            padding: 5px;
+            min-width: 100%;
+            min-height: 100px;
+            border-radius: 5px;
+        }
+
+        .button{
+            font-weight: bolder;
+            color: $grey_dark;
+            min-width: 90px;
+            min-height: 40px;
+            border-radius: 5px;
+            background: $white;
+            border: 3px solid $white;
+
+            &:hover{
+                color: $white;
+                background: $red;
+                border: 3px solid $blue;
+                font-weight: bolder;
+            }
+        }
+
+    }
+
+    .comments{
+        float: right;
+        background: rgba(244, 244, 244, 0.4);
+        border-radius: 5px;
+        margin-top: -350px;
+        margin-left: -350px;
+        min-width: 600px;
+        padding: 30px;
+        text-align: center;
+    }
+
+}
+
+/***  Menu Page   ***/
+
+.background_manu1{
+    background-image: url('../images/pexels-photo-315704.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top center;
+    background-size: cover;
+   
+}
+
+.center_manu{
+   text-align: center;
+   margin-bottom: 60px;
+   margin-top: 20px;
+}
+
+.background{
+    display: inline-block;
+    width: 600px;
+    height: 690px;
+    background-image: url('../images/prozirna.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $blue;
+    font-size: 20px;
+    padding-left: 50px;  
+    padding-right: 50px; 
+    overflow: hidden;
+    border-radius: 20px;
+    border: 3px solid $red_opacity;
+    padding-bottom: 50px; 
+    text-align: left;
+    margin-top: 60px;
+    margin-left: 20px;
+}
+
+.background_2{
+    display: inline-block;
+    width: 600px;
+    height: 1000px;
+    background-image: url('../images/prozirna.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $blue;
+    font-size: 20px;
+    padding-left: 50px;  
+    padding-right: 50px; 
+    overflow: hidden;
+    border-radius: 20px;
+    border: 3px solid $red_opacity;
+    padding-bottom: 50px; 
+    text-align: left;
+    margin-top: 60px;
+    margin-left: 20px;
+}
+
+
+.little_burger{
+    display: none;
+}
+
+.little_pancake{
+    display: none;
+}
+
+.big_burger{
+    display: block;
+}
+
+.right{
+    float: right;
+}
+
+.center{
+    text-align: center;
+   
+}
+
+.burger{
+    margin-top: -30px;
+}
+
+.barbique{
+    margin-top: 40px;
+    text-transform: uppercase;
+    color: $red;
+    font-weight: 900;
+    font-size: 24px;
+}
+
+.content{
+    padding-top: 20px;
+    line-height: 2;
+    
+}
+.justify_text{
+    line-height: 1.7;
+    font-weight: bold;
+    font-size:22px;
+}
+
+.gr{
+    font-size: 16px;
+    padding-left: 20px;
+}
+
+.justify_cap{
+    padding-bottom: 10px;
+}
+
+.cm{
+    font-size:18px;
+}
+
+.top{
+    padding-top:10px;
+}
+
+.top_sweet{
+    padding-top:20px;
+}
+
+.bottom{
+    margin-top: -30px;
+    padding-bottom: 10px;
+}
+
+.drink_bottom{
+    margin-top: -30px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.small{
+    font-size: 17px;
+    padding-left: 20px;
+}
+
+/***  KONTAKT PAGE   ***/
+#contact_form{
+    background-image: url('../images/pexels-photo-315704.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top center;
+    background-size: cover;
+}
+.center_text{
+    padding-top: 40px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 22px;
+    color: $red;
+}
+
+.subtitle{
+    text-align: center;
+    font-size: 18px;
+    color: $white;
+}
+
+.right_side{
+    margin-top: -50px;
+    float: right;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.face{
+    margin-right: 10px;
+}
+
+.hide{
+    display: none;
+}
+
+.contact{
+    padding-bottom: 40px;
+    padding-top: 40px;  
+
+    .contact_form{
+        margin: 0 auto;
+        padding: 40px;
+        min-height: 450px;
+        max-width: 700px;
+        background: $red_opacity;
+        border: 2px solid $red;
+        border-radius: 10px;
+
+        .name{
+            padding: 10px;
+        }
+
+        .label{
+            font-weight: bolder;
+            color: $grey_dark;
+        }
+
+        .input{
+            padding: 5px;
+            min-width: 100%;
+            min-height: 40px;
+            border-radius: 5px;        
+        }
+
+        .input_text{
+            padding: 5px;
+            min-width: 100%;
+            min-height: 130px;
+            border-radius: 5px;
+        }
+
+        .button{
+            font-weight: bolder;
+            color: $grey_dark;
+            min-width: 100px;
+            min-height: 50px;
+            border-radius: 5px;
+            background: $white;
+            border: 3px solid $white;
+
+            &:hover{
+                color: $white;
+                background: $red;
+                border: 3px solid $blue;
+                font-weight: bolder;
+            }
+        }
+    }
+}
+
+.danger{
+    color: $red;
+    text-align: center;
+    font-weight: bold;
+}
+
+.success{
+    color: $green;
+    text-align: center;
+    font-weight: bold;
+}
+
+/*************************** MEDIAQUERY TABLET ************************/
+
+/*************************** MEDIAQUERY MOBILE ************************/
+
+@include mobile{
+
+    *{      
+        font-family: 'Lora', serif;
+        font-family: 'Open Sans Condensed', sans-serif;
+        
+    }
+    .container{
+        width: 90%;
+    }
+
+    .slide1{
+        display: block;
+        float: left;
+        padding-left: 20px;
+        padding-top: 20px;
+    }
+
+    nav{
+        display: none;
+    }
+
+    .logo{
+
+        margin-top: 50px;
+        
+        h1{
+            margin-top: -30px;
+            position: absolute;
+            left: 50%;
+            right: 50%;
+            transform: translate(-50%, -50%);        
+        }
+    }
+
+    main{
+        margin-top: 72px;
+    }
+
+    .background_header{    
+        background: url('../images/pizza_1_copy.jpg') no-repeat 0;
+        h2{
+             display: block;
+            font-size: 26px;
+        }
+
+        .red{
+            font-size: 26px;
+        }
+
+        .slogan{
+            font-size: 20px;
+        }
+
+    }
+
+/* Knjiga utisaka mobile */
+    #book_imp{
+        min-height: 50px;
+	    border-top: $red 1px solid;
+	    padding-top: 10px;
+        padding-bottom: 10px;
+
+        .tooltip_book{
+            float: right;
+
+            .book_h2{ 
+            display: none;
+            }
+        }
+    }
+
+ /* 3 boxes mobile */
+
+    .flexi_wrapper{
+        display: block;
+        .box_food{
+            margin: 50px 20px;
+             h4{
+                font-size: 24px;
+                padding: 12px 0px 12px;
+            }
+        }
+    }
+
+/* addresss */
+    .flexi_about{
+        display: block;
+        padding: 30px;
+
+        address{
+
+             margin-bottom: 40px;
+            .center{
+                font-size: 20px;
+            }
+
+        }
+        .open{
+           display: none;
+        }
+
+        .social_media_icons{
+            display: inline-block;
+            padding-left: 0px;
+
+                .tooltip{
+                    margin-top: 40px;
+                }
+                .face{
+                    
+                    float: left;
+                }
+                .insta{
+                    float: right;
+                }
+        }
+
+// KONTAKT
+    .mapa{
+        margin: 0 auto;
+        width: 100%;
+        height: 350px;
+        }
+    }
+
+    .center_text{
+        font-size: 24px;
+        padding-top: 70px;
+    }
+    
+    .show{
+        display: block;
+    }
+    
+    .contact{
+        padding-bottom: 40px;
+        padding-top: 20px;  
+    
+        .contact_form{
+            min-height: 250px;
+            max-width: 500px;
+
+            .name{
+                padding: 5px;
+            }
+    
+            .label{
+                text-transform: uppercase;
+            }
+    
+            .input_text{
+                min-height: 100px;
+            }
+        }
+    }
+
+// KNJIGA UTISAKA
+    .book_image{
+        padding-top: 50px; 
+    
+        .book_open{
+            display: block;
+            margin: auto;
+           
+        }
+        .h2_book_imp{
+            padding-top: 30px;       
+        }
+    }
+    .h3_comment{
+        text-transform: uppercase;
+    }
+
+    .space_around{
+
+        min-width: 100%;
+
+        .comments{
+            margin-top: 40px;
+            min-width: 100%;
+            text-align: center;
+        }
+
+}
+
+    /***  Menu Page   ***/
+
+    .background{
+        display: block;   
+        width: 100%;
+        height: auto;   
+        margin-left: 0px;
+        padding-left: 15px;  
+        padding-right: 15px; 
+    }
+
+    .background_2{
+        display: block;   
+        width: 100%;
+        height: auto;   
+        margin-left: 0px;
+        padding-left: 15px;  
+        padding-right: 15px; 
+    }
+
+    .middle{
+        text-align: center;
+    }
+
+   .down{
+       margin-top:5px;
+   }
+   .down_little{
+    margin-top:1px;
+   }
+
+   .little_burger{
+        display: block;
+        margin:  0 auto;
+        
+    }
+
+    .big_burger{
+        display: none;
+    }
+
+    .burger{
+        margin-top: -20px;
+    }
+
+    .justify_text{
+        line-height: 1.6;
+        font-weight: 600;
+        font-size: 20px; 
+    }
+
+    .gr{
+        display: none;
+    }
+
+    .price{
+        font-size: 18px;
+    }
+
+    .description{
+        font-size: 18px;
+    }
+
+    .small{
+        padding-left: 5px;
+    }
+
+    .little_pancake{
+        padding-top: 20px;
+        display: block;
+    }
+
+    footer{
+        padding: 25px;
+    }
+
+    .hidep{
+        display: none;
+    }
+
+}
+
+

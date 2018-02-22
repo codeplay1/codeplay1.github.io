@@ -1,0 +1,22 @@
+// font
+$main_font: 'Permanent Marker', cursive; 
+
+// colors
+$white: rgb(250, 250, 250);
+$black: rgb(0, 0, 0);
+$red: rgb(206, 17, 38);
+$red_opacity: rgba(206, 17, 38, 0.8);
+$grey: rgb(73,76,73);
+$grey_dark: #323232;
+$blue: #609191;
+$green: #3F873F;
+
+
+//breakpoints mobile
+$small_min_breakpont: 320px;
+$small_max_breakpont: 640px;
+
+//breakpoints tablet
+$middle_min_breakpont: 768px;
+$middle_breakpoint: 960px;
+$middle_max_breakpont: 1024px;
